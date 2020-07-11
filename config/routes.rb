@@ -5,4 +5,14 @@ Rails.application.routes.draw do
   end
   resources :songs
 
+  #get 'admin/preferences', to: 'preferences#index'
+
+  #scope '/admin' do
+    #resources :preferences, only: [:index]
+  #end
+
+  namespace :admin do
+    resources :preferences
+  end
+
 end
